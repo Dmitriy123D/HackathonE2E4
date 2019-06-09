@@ -1,0 +1,246 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+body {
+	background-color: #e2e2e2;
+}
+
+h1.title {
+	font-size: 3.25rem;
+	margin-bottom: 4rem;
+}
+h1.title span {
+	color: #6b97b9;
+	text-decoration: underline;
+}
+.container {
+	max-width: 1200px;
+	width: 100%;
+    margin: auto;
+    padding: 4rem;
+}
+
+.frontpage {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.frontpage:before {
+	content: '';
+	display: block;
+	background-image: url(/images/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.05);
+	z-index: -1;
+	opacity: 0;
+	transition: all 2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.load .frontpage:before {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+#map {
+	width: 100%; height: 500px; padding: 0; margin: 0;
+}
+
+
+.switch-element {
+    display: grid;
+    grid-template-columns: 220px 220px;
+    margin-bottom: 4rem;
+}
+.switch-element .switch-element__one {
+    border-radius: 50px 0 0 50px;
+    cursor: pointer;
+}
+.switch-element .switch-element__two {
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+}
+.switch-element .switch-element__one,
+.switch-element .switch-element__two {
+	border: 2px solid #6b97b9;
+	padding: .75rem 1rem;
+	color: #6b97b9;
+	font-weight: 600;
+	text-align: center;
+}
+.switch-element .switch-element__one.active,
+.switch-element .switch-element__two.active {
+	background-color: #6b97b9;
+	color: #FFF;
+}
+.switch-element .switch-element__one:hover,
+.switch-element .switch-element__two:hover {
+	box-shadow: 0 0 40px -10px rgba(0,0,0,0.5);
+}
+
+.switch-body .switch-element__one,
+.switch-body .switch-element__two {
+	display: none;
+}
+.switch-body .switch-element__one.active,
+.switch-body .switch-element__two.active {
+	display: block;
+}
+
+input[type="text"] {
+	width: 440px;
+	background-color: #FFF;
+	border: 0;
+	padding: 1.25rem 2rem;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.uchrejd,
+.uslugi {
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	margin-top: 2rem;
+}
+
+.uchrejd .search_card,
+.uslugi .search_card {
+    background-color: #FFF;
+    padding: 2rem 3em;
+    align-items: center;
+    display: grid;
+}
+
+.uchrejd .search_card a,
+.uslugi .search_card a {
+    color: #497da5;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.uchrejd .search_card .search_card_address,
+.uslugi .search_card .search_card_address {
+    color: #b4b1b1;
+    font-size: .875rem;
+    margin-top: 1rem;
+}
+
+.uchrejd .search_card:hover {
+	box-shadow: 0 0 40px -10px rgba(0,0,0,0.5);
+    background-color: #6b97b9;
+	color: #FFF;
+}
+
+.uchrejd .search_card:hover a {
+	color: #FFF;
+}
+.uchrejd .search_card:hover a:hover {
+	text-decoration: underline;
+}
+
+.uchrejd .search_card:hover .search_card_address {
+	color: #e2e4e6;
+}
+
+
+
+
+
+
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    background-color: #FFF;
+}
+.content-body {
+    padding: 4rem;
+}
+
+.content-body h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #6b97b9;
+	margin-bottom: 1rem;
+}
+
+.content-body h6 {
+	font-size: 1rem;
+	color: #aaa;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 3rem;
+}
+
+.content-body .body-label {
+	font-weight: 600;
+}
+.zapis {
+	margin-top: 4rem;
+}
+.zapis a {
+	background-color: #6b97b9;
+	color: #fff;
+	padding: 1rem 2rem;
+	display: inline-block;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+
+.u-full-width {
+    background-color: #FFF;
+    padding: 4rem;
+    width: 100%;
+	border-spacing: 0;
+}
+.u-full-width td {
+    padding: 16px 12px;
+    vertical-align: top;
+}
+.u-full-width > tr:nth-of-type(2n+1), .u-full-width tbody tr:nth-of-type(2n+1) {
+    background: #f8f8f8;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.u-full-width > tr:not(:first-child),
+.u-full-width > :not(:first-child) > tr,
+.u-full-width > :first-child > tr:not(:first-child) {
+    border-top: 1px solid #e5e5e5;
+}
